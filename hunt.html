@@ -32,6 +32,7 @@
     <p class="text-center"> Click on the squares to search for a bird</p>
     <p id="shakes">Number of shakes is zero</p>
     <p id="score">Location score is unknown</p>
+    <button type="button" class="btn btn-primary" onclick="reset()">New Game</button>
 		<div class="image-grid d-flex flex-column justify-content-center align-items-center">
             <div class="image-row d-flex">
                 <div class="image-col"><img src="images.jpg" id="image0" onclick="check(0)" alt="Plant Image" class="mw-80 grid-img"></div>
@@ -77,7 +78,7 @@
             var birdlocation = 18;
             function check(position)
             {
-                id = ids[position]
+                i = ids[position]
                 image_id = document.getElementById(ids[position]);
                 if(birdlocation == position)
                 {
@@ -146,6 +147,11 @@
           {
            return 0
          }
+            }
+            function reset(){
+                shakecount = 0;
+                birdlocation = Math.random(0,24);
+                document.getElementById("shakes").innerHTML = "Number of shakes is " + shakecount;                
             }
         </script>
 	</body>
