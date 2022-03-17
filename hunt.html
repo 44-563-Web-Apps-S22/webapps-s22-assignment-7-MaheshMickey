@@ -92,13 +92,6 @@
                 document.getElementById("score").innerHTML = "Location score is :"+ locationScore(position,birdlocation)
             }
 
-            function reset(){
-                shakecount = 0;
-                birdlocation = Math.random(0,24);
-                document.getElementById("shakes").innerHTML = "Number of shakes is " + shakecount;                
-                // birdLocation = Math.floor(Math.random() * 25);
-                document.getElementById("score").innerHTML = "Location score is unknown"
-            }
             function locationScore(pos1,pos2)
             {
                 document.getElementById(ids[pos1])
@@ -154,6 +147,14 @@
           {
            return 0
          }
+            }
+
+            function reset(){
+                shakecount = 0;
+                birdlocation = Math.random(0,24);
+                document.getElementById("shakes").innerHTML = "Number of shakes is " + shakecount;                
+                // birdLocation = Math.floor(Math.random() * 25);
+                document.getElementById("score").innerHTML = "Location score is unknown"
             }
            
         </script>
